@@ -1,0 +1,125 @@
+:root {
+  --tomato-red: #e0301e;       /* 잘 익은 토마토 */
+  --tomato-red-dark: #b82312;
+  --stem-green: #3f8f3a;       /* 초록색 꼭지 */
+  --stem-green-dark: #2d6e2a;
+  --bg: #fff5f2;
+  --text: #3a1410;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", "Malgun Gothic", sans-serif;
+}
+
+.pomodoro {
+  width: 100%;
+  max-width: 400px;
+  margin: 16px;
+  padding: 32px 28px;
+  background: #fff;
+  border-top: 10px solid var(--stem-green);
+  border-radius: 28px;
+  box-shadow: 0 8px 24px rgba(224, 48, 30, 0.2);
+  text-align: center;
+}
+
+.pomodoro h1 {
+  margin: 0 0 24px;
+  font-size: 2rem;
+  color: var(--tomato-red);
+}
+
+.tomato {
+  position: relative;
+  margin: 0 auto 28px;
+  max-width: 300px;
+  filter: drop-shadow(0 8px 10px rgba(120, 20, 10, 0.3));
+}
+
+.tomato svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.timer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 62%;
+  transform: translateY(-50%);
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--stem-green);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--stem-green-dark);
+}
+
+.btn-stop {
+  background: var(--tomato-red);
+}
+
+.btn-stop:hover {
+  background: var(--tomato-red-dark);
+}
+
+.btn-reset {
+  background: #fff;
+  color: var(--tomato-red);
+  border: 2px solid var(--tomato-red);
+}
+
+.btn-reset:hover {
+  background: var(--bg);
+}
+
+.btn-settings {
+  display: inline-block;
+  padding: 8px 20px;
+  color: var(--stem-green);
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--stem-green);
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-settings:hover {
+  background: var(--stem-green);
+  color: #fff;
+}

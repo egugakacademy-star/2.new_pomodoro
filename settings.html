@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <main class="settings">
+    <h3>Setting</h3>
+
+    <div class="field">
+      <label for="timer-minutes">타이머 시간 (분)</label>
+      <input type="number" id="timer-minutes" name="timer-minutes" min="1" max="60" value="25">
+    </div>
+
+    <div class="actions">
+      <button type="button" class="done-button">저장</button>
+      <a class="back-button" href="index.html">메인으로</a>
+    </div>
+  </main>
+  <script src="settings.js"></script>
+</body>
+</html>
