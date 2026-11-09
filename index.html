@@ -9,6 +9,7 @@
 <body>
   <main class="pomodoro">
     <h1>Pomodoro</h1>
+    <div id="current-time" class="current-time" aria-label="현재 시간"></div>
 
     <div class="tomato">
       <svg viewBox="0 0 300 250" aria-hidden="true">
@@ -48,5 +49,15 @@
     <a class="btn-settings" href="settings.html">설정</a>
   </main>
   <script src="script.js"></script>
+  <script>
+    (function () {
+      var el = document.getElementById('current-time');
+      function updateClock() {
+        el.textContent = new Date().toLocaleTimeString('ko-KR', { hour12: false });
+      }
+      updateClock();
+      setInterval(updateClock, 1000);
+    })();
+  </script>
 </body>
 </html>
